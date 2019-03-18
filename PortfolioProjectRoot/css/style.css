@@ -1,0 +1,238 @@
+
+/*----------------------------------*/
+/*-----------Basic Setup------------*/
+/*----------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+    color: #eee;
+    font-family: "Tesla", "Arial", "sans-serif";
+    font-size: 18px;
+    text-rendering: optimizeLegibility;
+	scroll-behavior:smooth;
+}
+
+body { 
+overflow-x: hidden;
+overflow-y: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #eee;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+@font-face {
+    font-family: "Tesla";
+    src: url("fonts/TESLA.ttf");
+}
+
+.row {
+    max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+/*----------------------------------*/
+/*-----------Navigation-------------*/
+/*----------------------------------*/
+
+header {
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("img/futurecity.jpg") center no-repeat;
+	background-size: cover;
+}
+
+nav {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.my-name {
+	font-size: 250%;
+
+}
+
+.my-name span {
+	color: crimson;
+}
+
+nav ul {
+	display: flex;
+}
+
+nav ul li {
+	list-style: none;
+	padding: 10px 0;
+}
+
+nav ul li a {
+	padding: 10px;
+	margin: 0 1px;
+	position: relative;
+}
+nav ul li:last-child {
+	margin-right: 0;
+	margin-left: 10px;
+
+}
+
+nav ul li a::before, nav ul li a::after {
+	content: '';
+	position:absolute;
+	width: 100%;
+	height: 2px;
+	background-color: crimson;
+	left: 0;
+	transform: scaleX(0);
+	transition: all 0.5s;
+}
+
+
+nav ul li a::before {
+	top: 0;
+	transform-origin: left;
+}
+
+nav ul li a::after {
+	bottom: 0;
+	transform-origin: right;
+}
+
+nav ul li a:hover::before {
+	transform: scaleX(1);
+}
+
+nav ul li a:hover::after {
+	transform: scaleX(1);
+}
+
+
+/*----------------------------------*/
+/*-----------Search Box-------------*/
+/*----------------------------------*/
+
+.search-box {
+	background: crimson;
+	height: 40px;
+	border-radius: 40px;
+	padding: 0;
+}
+
+.search-box a:before, .search-box a:after {
+	content: '';
+	width: 0;
+	height: 0;
+}
+
+.search-btn {
+	color: black;
+	background: crimson;
+	height: 45px;
+	width: 45px;
+	border-radius: 50%;
+    align-items: center;
+	justify-content: center;
+	transition: 0.4s;
+	position: relative;
+	top: 8px;
+    left: 1px;
+}
+.search-txt {
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	font-size: 16px;
+	padding: 0;
+	color: white;
+	transition: 0.4s;
+	width: 0px;
+	margin-top: 10px;
+	
+}
+
+.search-box:hover > .search-txt {
+	width: 240px;
+	padding: 0 10px;
+}
+.search-box:hover > .search-btn {
+    background: white;
+	position: relative;
+}
+
+/*----------------------------------*/
+/*-----------Intro/Buttons----------*/
+/*----------------------------------*/
+
+
+.my-intro {
+	text-align: center;
+	position: absolute;
+	width: 1140px;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.my-intro h2 {
+	font-size: 300%;
+	padding-bottom: 30px;
+}
+
+.my-intro h2 span {
+    color: crimson;
+}
+
+.header-btns div {
+    border: 2px solid crimson;
+	margin-top: 100px;
+}
+
+.button {
+	width: 30%;
+	background: crimson;
+	border-radius: 50px;
+}
+
+.button a:link, .button a:visited {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	padding: 20px;
+	border-radius: 50px;
+	transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.btn-lft {
+	float: left;
+	margin-left: 15%;
+}
+
+.btn-rht {
+	float: right;
+	margin-right: 15%;
+}
+
+.button a:hover, .button a:active {
+	background-color: rgba(255,255,255, 0.9);
+	color: black;
+}
+
